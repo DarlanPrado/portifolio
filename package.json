@@ -12,5 +12,10 @@
   "dependencies": {
     "nuxt": "^3.12.4",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^0.4.0",
+    "@nuxt/ui": "^2.18.3",
+    "@pinia/nuxt": "^0.5.2"
   }
 }
