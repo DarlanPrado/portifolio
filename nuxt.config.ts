@@ -5,5 +5,10 @@ export default defineNuxtConfig({
   // typescript: {
   //   typeCheck: true
   // },
-  modules: ["@pinia/nuxt", '@nuxt/ui', '@nuxt/eslint']
+  modules: [
+    "@pinia/nuxt",
+    '@nuxt/ui',
+    '@nuxt/eslint',
+    '@nuxt/image'
+  ]
 })
