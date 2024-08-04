@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxtjs/google-fonts'
-  ]
+    ['@nuxtjs/google-fonts', {
+      families: {
+        "Bebas Neue": true,
+        "Mukta": true
+      },
+      preload: true
+    }]
+  ],
 })

@@ -2,6 +2,10 @@ import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
     theme: {
+        fontFamily: {
+            'bebas': ['Bebas Neue', 'ui-sans-serif'],
+            'mukta': ['Mukta', 'ui-sans-serif']
+        },
         extend: {
             colors: {
                 green: {
@@ -17,7 +21,7 @@ export default <Partial<Config>>{
                     900: '#0A5331',
                     950: '#052e16'
                 }
-            }
-        }
+            },
+        },
     }
 }
