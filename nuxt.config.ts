@@ -16,6 +16,6 @@ export default defineNuxtConfig({
         "Mukta": true
       },
       preload: true
-    }]
+    }],
   ],
 })
