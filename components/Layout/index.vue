@@ -1,6 +1,6 @@
 <template>
   <!-- <LayoutNavbar /> -->
-  <div class="absolute right-5 top-5">
+  <div class="fixed z-50 right-5 top-5">
     <LazyChangeTheme />
   </div>
   <!-- <div class="bg-cover bg-center w-full h-screen flex flex-col snap-start" style="background-image: url(/code-image.jpg)">
@@ -14,14 +14,33 @@
     </div>
   </div> -->
   <div class="h-screen">
-    <div class="h-full w-full z-10 absolute bg-gradient-to-bl from-gray-800 via-primary-400/50 to-gray-800"></div>
+    <div class="h-full w-full z-10 absolute bg-gradient-to-bl from-gray-200 dark:from-gray-800 via-primary-400/90 dark:via-primary-400/50 to-gray-200 dark:to-gray-800"></div>
     <div v-show="showCursorDivEffect" ref="cursorDivEffect" id="cursorDivEffect" class="absolute rounded-full transition-opacity h-[300px] w-[300px] z-20"></div>
     <div class="h-full w-full z-30 absolute bg-transparent backdrop-blur-sm">
-      <div class="w-full h-full flex flex-col bg-gradient-to-b from-gray-200/0 to-gray-800" @mousemove="moveDiv" @mouseenter="showCursorDivEffect = true" @mouseleave="showCursorDivEffect = false">
+      <div class="w-full h-full flex flex-col bg-gradient-to-b from-transparent to-gray-200 dark:to-gray-800" @mousemove="moveDiv" @mouseenter="showCursorDivEffect = true" @mouseleave="showCursorDivEffect = false">
         <div class="h-full flex justify-center items-center">
           <div class="p-5">
             <h2 class="font-semibold text-6xl text-center">Olá, meu nome é <span class="text-primary-600 dark:text-primary-500 text-6xl font-bold">Darlan</span></h2>
             <h4 class="text-4xl text-center">Desenvolvedor Fullstack</h4>
+            <div class="flex justify-center items-center mt-2">
+              <div class="flex gap-5">
+                <UTooltip text="Linkedin">
+                  <ULink :to="useLinksStore().getLinks['linkedin']" active-class="text-primary" target="_blank" >
+                    <UIcon name="i-logos-linkedin-icon" class="w-10 h-10" />
+                  </ULink>
+                </UTooltip>
+                <UTooltip text="Github">
+                  <ULink :to="useLinksStore().getLinks['github']" active-class="text-primary" target="_blank" >
+                    <UIcon name="i-logos-github-icon" class="w-10 h-10"/>
+                  </ULink>
+                </UTooltip>
+                <UTooltip text="Gmail">
+                  <ULink :to="useLinksStore().getLinks['email']" active-class="text-primary" target="_blank" >
+                    <UIcon name="i-logos-google-gmail" class="w-10 h-10"/>
+                  </ULink>
+                </UTooltip>
+              </div>
+            </div>
           </div>
         </div>
       </div>
