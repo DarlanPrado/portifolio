@@ -18,4 +18,5 @@ export default defineNuxtConfig({
       preload: true
     }],
   ],
+  icon: ["heroicons", "grommet-icons"],
 })

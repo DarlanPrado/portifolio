@@ -21,6 +21,8 @@ export default withNuxt(
       'no-multi-spaces': ['error', { ignoreEOLComments: true }],
       'no-trailing-spaces': ['error'],
 
+      '@typescript-eslint/type-annotation-spacing': 'error',
+
       // Vuejs
       'vue/multi-word-component-names': 0,
       'vue/html-indent': ['error', 2],
