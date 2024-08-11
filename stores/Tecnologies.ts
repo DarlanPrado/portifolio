@@ -9,24 +9,44 @@ export const useTecnologiesStore = defineStore('tecnologies', {
         return {
             tecnologies: [{
                 name: 'Nuxt.js',
-                description: 'vue',
+                description: '',
                 tag: useTagsStore().getTagsByName(['Nuxt'])[0],
             },
             {
                 name: 'Vue.js',
-                description: 'vue',
+                description: '',
                 tag: useTagsStore().getTagsByName(['Vue'])[0],
             }, {
                 name: 'TypeScript',
-                description: 'vue',
+                description: '',
                 tag: useTagsStore().getTagsByName(['TypeScript'])[0],
             }, {
+                name: 'Node.js',
+                description: '',
+                tag: useTagsStore().getTagsByName(['Node'])[0],
+            }, {
                 name: 'Golang',
-                description: 'vue',
+                description: '',
                 tag: useTagsStore().getTagsByName(['Golang'])[0],
             }, {
+                name: 'Docker',
+                description: '',
+                tag: useTagsStore().getTagsByName(['Docker'])[0],
+            }, {
+                name: 'Linux',
+                description: '',
+                tag: {
+                    icon: 'i-logos-linux-tux',
+                    name: 'Linux',
+                    color: 'orange',
+                },
+            }, {
+                name: 'PostgreSQL',
+                description: '',
+                tag: useTagsStore().getTagsByName(['Postgre'])[0],
+            }, {
                 name: 'PHP',
-                description: 'vue',
+                description: '',
                 tag: useTagsStore().getTagsByName(['PHP'])[0],
             }]
         }

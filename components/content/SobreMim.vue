@@ -8,14 +8,19 @@
       <div class="grid lg:grid-cols-2 gap-2">
         <div class="mx-10 space-y-4 text-lg">
           <div>
-            <p>Sou desenvolvedor <strong>Fullstack</strong> especializado em criar aplicações web modernas, altamente <strong>escaláveis</strong> e de alto <strong>desempenho</strong>.</p>
-            <p>Utilizo tecnologias avançadas como <strong>Nuxt3</strong>, <strong>Vue3</strong>, <strong>Typescript</strong> e <strong>Golang</strong> para entregar soluções robustas e eficientes.</p>
+            <p>Sou <strong>apaixonado</strong> por tecnologia e adoro criar soluções que resolvem problemas de maneira eficiente.</p>
           </div>
           <div>
-            <p>Tenho expertise em projetar e implementar bancos de dados sólidos e escaláveis, trabalhando com <strong>CockroachDB</strong>, <strong>PostgreSQL</strong>, <strong>MySQL</strong> e <strong>MongoDB</strong>.</p>
+            <p>Minha jornada na programação começou como um hobby, criando ferramentas simples em <strong>Python</strong> e <strong>JavaScript</strong>. Em janeiro de 2023, tive a oportunidade de ingressar no setor de tecnologia da empresa onde trabalhava, onde desenvolvi sistemas web, como <strong>Softphones</strong>, <strong>Webchats</strong>, <strong>CRMs</strong>, entre outros, o que aprimorou muito minhas habilidades e ampliou minha experiência, especialmente ao entregar projetos para grandes clientes.</p>
           </div>
           <div>
-            <p>Com essa base, sou capaz de desenvolver uma ampla gama de ferramentas, incluindo <strong>e-commerces</strong>, <strong>landing pages</strong>, <strong>ERPs</strong> e <strong>sistemas de tempo real</strong>.</p>
+            <p>Nos meus momentos livres, gosto de jogar, assistir filmes e séries, ou me dedicar a projetos pessoais e aprender novas tecnologias.</p>
+            <p>De vez em quando, surge uma vontade de explorar novos <strong>hobbies</strong>, como escrever um livro, tocar um instrumento ou até mesmo editar vídeos e fotos, o que me leva a aprender diversas coisas novas.</p>
+          </div>
+          <div>
+           <p>Atualmente, estou cursando <strong>Engenharia de Software</strong> na Católica, já na quarta fase. Pretendo concluir o curso e, em seguida, considerar um <strong>mestrado</strong> ou talvez uma segunda graduação em áreas complementares, como <strong>UX/UI Design</strong> ou <strong>Gestão de Projetos</strong>.</p>
+          </div>
+          <div>
           </div>
         </div>
         <div id="divImage" class="flex justify-center items-center teste rounded-full">
