@@ -3,7 +3,7 @@
         <UCard class="border-2 border-gray-50/0 hover:border-primary-500" :ui="{ background: 'hover:bg-gray-100 hover:dark:bg-gray-800'}">
             <div class="grid grid-cols-1 sm:flex gap-4">
                 <div class="flex justify-center" >
-                    <LazyNuxtImg v-if="props.data.images?.length" :src="props.data.images![0]" height="110" width="220" />
+                    <LazyNuxtImg v-if="props.data.images?.length" preload fit="fill" :src="props.data.images![0]" height="110" width="220" />
                 </div>
                 <div class="w-full">
                     <div>
@@ -20,15 +20,15 @@
                     </div>
                     </div>
                     <div>
-                    <span v-if="props.data.description" class="mt-2 text-md line-clamp-6 text-gray-400 dark:text-gray-500 leading-none">{{ props.data.description }}</span>
-                    <div class="flex gap-3 mt-4">
-                        <div class="flex justify-center items-center" v-for="tag in props.data.tags" :key="tag.name">
-                        <UTooltip :text="tag.name">
-                            <LazyUIcon class="w-6 h-6" v-if="tag.icon" :name="tag.icon" />
-                            <LazyUBadge :color="tag.color" v-else :label="tag.name" />
-                        </UTooltip>
+                        <p v-if="props.data.description" class="mt-2 text-md line-clamp-none text-gray-400 dark:text-gray-500 leading-none">{{ props.data.description }}</p>
+                        <div class="grid grid-cols-6 md:flex gap-3 mt-4">
+                            <div class="flex justify-center items-center" v-for="tag in props.data.tags" :key="tag.name">
+                                <UTooltip :text="tag.name">
+                                    <LazyUIcon class="w-6 h-6" v-if="tag.icon" :name="tag.icon" />
+                                    <LazyUBadge :color="tag.color" v-else :label="tag.name" />
+                                </UTooltip>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>

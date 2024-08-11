@@ -6,7 +6,7 @@
     <div class="snap-start min-h-screen py-20 space-y-10">
       <ContentMeuTrabalho />
       <ContentMeusProjetos />
-      <ContentTecnologias />
+      <ContentPrincipaisTecnologias />
     </div>
     <div class="snap-start min-h-screen bg-gradient-to-b  from-primary-500 dark:from-primary-600 to-primary-700 dark:to-primary-900 dark:bg-primary-600 py-10">
       <ContentSobreMim />

@@ -47,6 +47,14 @@ export const useTagsStore = defineStore('tags', {
                 name: 'Postgre',
                 icon: 'i-logos-postgresql',
                 color: 'orange',
+            }, {
+                name: 'WebSocket',
+                icon: 'i-logos-websocket',
+                color: 'green',
+            }, {
+                name: 'Mongo',
+                icon: 'i-logos-mongodb-icon',
+                color: 'green'
             }],
         };
     },

@@ -49,6 +49,10 @@ const cursorDivEffect = ref<HTMLElement | null>(null);
 
 
 const moveDiv = (event: MouseEvent) => {
+  if(!showCursorDivEffect.value){
+    showCursorDivEffect.value = true;
+  }
+
   if (cursorDivEffect.value) {
     const { clientX, clientY } = event;
     const circle = cursorDivEffect.value;
