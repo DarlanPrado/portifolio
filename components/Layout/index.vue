@@ -3,20 +3,11 @@
   <div class="fixed z-50 right-5 top-5">
     <LazyChangeTheme />
   </div>
-  <!-- <div class="bg-cover bg-center w-full h-screen flex flex-col snap-start" style="background-image: url(/code-image.jpg)">
-    <div class="w-full h-full flex flex-col bg-gradient-to-b from-gray-200/75 via-gray-200/60 to-gray-200 dark:from-gray-800/95 dark:via-gray-800/80 dark:to-gray-800 to-99%">
-      <div class="h-full flex justify-center items-center">
-        <div class="p-5">
-          <h2 class="font-semibold text-6xl text-center">Olá, meu nome é <span class="text-primary-600 dark:text-primary-500 text-6xl font-bold">Darlan</span></h2>
-          <h4 class="text-4xl text-center">Desenvolvedor Fullstack</h4>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div class="h-screen">
+    <!-- <div class="absolute inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div> -->
     <div class="h-full w-full z-10 absolute bg-gradient-to-bl from-gray-200 dark:from-gray-800 via-primary-400/90 dark:via-primary-400/50 to-gray-200 dark:to-gray-800"></div>
     <div v-show="showCursorDivEffect" ref="cursorDivEffect" id="cursorDivEffect" class="absolute rounded-full transition-opacity h-[300px] w-[300px] z-20"></div>
-    <div class="h-full w-full z-30 absolute bg-transparent backdrop-blur-sm">
+    <div :class="useColorMode().value == 'light' ? 'grid' : ''" class="h-full w-full z-30 absolute bg-transparent backdrop-blur-sm">
       <div class="w-full h-full flex flex-col bg-gradient-to-b from-transparent to-gray-200 dark:to-gray-800" @mousemove="moveDiv" @mouseenter="showCursorDivEffect = true" @mouseleave="showCursorDivEffect = false">
         <div class="h-full flex justify-center items-center">
           <div class="p-5">
@@ -58,6 +49,10 @@ const cursorDivEffect = ref<HTMLElement | null>(null);
 
 
 const moveDiv = (event: MouseEvent) => {
+  if(!showCursorDivEffect.value){
+    showCursorDivEffect.value = true;
+  }
+
   if (cursorDivEffect.value) {
     const { clientX, clientY } = event;
     const circle = cursorDivEffect.value;
@@ -95,9 +90,17 @@ const getScrollBarWidth = (): number => {
 
 #cursorDivEffect {
   background: radial-gradient(circle, #06b6d4, transparent);
-
-  
   filter: blur(30px);
   transition: opacity 0.5s ease-in-out;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #58585815 1px, transparent 1px),
+    linear-gradient(to bottom, #58585815 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 </style>

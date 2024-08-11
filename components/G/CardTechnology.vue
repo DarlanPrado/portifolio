@@ -1,5 +1,5 @@
 <template>
-    <section ref="section">
+    <section ref="section" class="card">
         <UCard>
             <div class="'w-full h-full'">
                 <div class="flex justify-center items-center mb-2">
@@ -10,7 +10,6 @@
         </UCard>
     </section>
 </template>
-
 <script setup lang="ts">
 import type { Technology } from '~/types/stores/Tecnologies';
 const { $anime } = useNuxtApp();
@@ -67,3 +66,8 @@ onMounted(() => {
     animeScrollLeftSideIn();
 });
 </script>
+<style scoped>
+.card {
+    transform-style: preserve-3d;
+}
+</style>
