@@ -22,7 +22,7 @@
                     <div>
                     <span v-if="props.data.description" class="mt-2 text-md line-clamp-6 text-gray-400 dark:text-gray-500 leading-none">{{ props.data.description }}</span>
                     <div class="flex gap-3 mt-4">
-                        <div class="flex justify-center items-center" v-for="tag in props.data.tags" :key="tag.id">
+                        <div class="flex justify-center items-center" v-for="tag in props.data.tags" :key="tag.name">
                         <UTooltip :text="tag.name">
                             <LazyUIcon class="w-6 h-6" v-if="tag.icon" :name="tag.icon" />
                             <LazyUBadge :color="tag.color" v-else :label="tag.name" />
