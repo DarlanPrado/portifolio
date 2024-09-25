@@ -14,6 +14,14 @@ export const useProjectsStore = defineStore('projects', {
                 githubLink: "https://github.com/DarlanPrado/portifolio",
                 description: "Tratase do mesmo projéto em que você está, teste na pratica seu uso ;) .",
                 title: "Portfólio",
+            },{
+                id: "resume_pro",
+                images: ["/projects/resume_pro/home.png"],
+                tags: useTagsStore().getTagsByName(['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Tailwindcss']),
+                description: "Ferramenta para criação de curriculos personalizados.",
+                link: 'https://resume-pro-curriculum.vercel.app/',
+                githubLink: 'https://github.com/DarlanPrado/resume_pro',
+                title: "ResumePro",
             }, {
                 id: "bash_app",
                 images: ["/projects/bash_app/home.png"],
