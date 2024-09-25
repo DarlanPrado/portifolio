@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  app: {
+    head: {
+      meta: [
+        { name: 'google-site-verification', content: 'jvGt8cPvoYQile3Fh5yqwYk3K3qGkPgFE8ozb9bLg2E'}
+      ]
+    }
+  },
   modules: [
     "@pinia/nuxt",
     '@nuxt/ui',
