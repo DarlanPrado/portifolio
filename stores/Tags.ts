@@ -55,6 +55,10 @@ export const useTagsStore = defineStore('tags', {
                 name: 'Mongo',
                 icon: 'i-logos-mongodb-icon',
                 color: 'green'
+            }, {
+                name: 'JQuery',
+                icon: 'i-logos-jquery',
+                color: 'blue',
             }],
         };
     },

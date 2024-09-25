@@ -4,7 +4,7 @@
             <UContainer class="text-lg h-full flex flex-col">
                 <div class="flex w-full h-full">
                     <div class="w-full px-4">
-                        <h5 class="text-3xl font-semibold">Darlan josé Batista do Prado</h5>
+                        <h1 class="text-3xl font-semibold">Darlan José Batista do Prado</h1>
                     </div>
                     <UDivider icon="i-heroicons-qr-code-solid" orientation="vertical" />
                     <div class="flex flex-col gap-2 w-full px-4">
