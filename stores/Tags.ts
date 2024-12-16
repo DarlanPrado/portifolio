@@ -27,7 +27,19 @@ export const useTagsStore = defineStore('tags', {
                 name: 'PHP',
                 icon: 'i-logos-php',
                 color: 'purple',
-            }, {
+            },{
+                name: 'Laravel',
+                icon: 'i-logos-laravel',
+                color: 'red',
+            },{
+                name: 'Vuetify',
+                icon: 'i-logos-vuetifyjs',
+                color: 'blue',
+            },{
+                name: 'React',
+                icon: 'i-logos-react',
+                color: 'blue',
+            },{
                 name: 'Node',
                 icon: 'i-logos-nodejs-icon',
                 color: 'lime',
