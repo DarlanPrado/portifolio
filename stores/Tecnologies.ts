@@ -17,6 +17,14 @@ export const useTecnologiesStore = defineStore('tecnologies', {
                 description: '',
                 tag: useTagsStore().getTagsByName(['Vue'])[0],
             }, {
+                name: 'React & React-native',
+                description: '',
+                tag: useTagsStore().getTagsByName(['React'])[0],
+            },{
+                name: 'Laravel',
+                description: '',
+                tag: useTagsStore().getTagsByName(['Laravel'])[0],
+            },{
                 name: 'TypeScript',
                 description: '',
                 tag: useTagsStore().getTagsByName(['TypeScript'])[0],

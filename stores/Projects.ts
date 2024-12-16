@@ -27,17 +27,24 @@ export const useProjectsStore = defineStore('projects', {
                 images: ["/projects/bash_app/home.png"],
                 tags: useTagsStore().getTagsByName(['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Tailwindcss', 'Golang', 'Docker', 'Postgre']),
                 description: "Ferramenta para controlar o acesso de todos os clientes com os seus devidos serviços contratados, além de dar acesso ao relatório de uso, monitoramento operacional.",
-                title: "Bash App",
+                title: "App",
             }, {
                 id: "bash_webbot",
                 tags: useTagsStore().getTagsByName(['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Tailwindcss', 'Golang', 'Docker', 'WebSocket', 'Mongo']),
                 description: "Ferramenta de chat para atendimento operacional, incluindo anexagem de arquivos, comando para mensagens automáticas, controle de filas, controle de pausas e disponibilidade, operando em tempo real.",
-                title: "Bash Webbot",
+                title: "Webbot",
             }, {
                 id: "bash_callphone",
                 tags: useTagsStore().getTagsByName(['Nuxt', 'Vue', 'TypeScript', 'Pinia', 'Tailwindcss', 'Golang', 'Docker']),
                 description: "Ferramenta de softphone(Software de chamadas telefonicas) para atendimento operacional, tendo controle de filas, controle de pausas e disponibilidade, tendo também um serviço de discador(Disparo automático de ligação) podendo ter integração a ferramentas exernas como CRMs",
-                title: "Bash Callphone",
+                title: "Callphone",
+            },{
+                id: "sethtotal",
+                images: ["/projects/sethtotal/home.png"],
+                link: 'https://sethtotal.com.br/',
+                tags: useTagsStore().getTagsByName(['Vue','Typescript', 'Pinia','Vuetify','PHP','Laravel','Docker','Postgre']),
+                description: 'Ferramenta de gestão financeira para empresas com gerador de boleto, pix, higienização de clientes, analize de crédito negativação Serasa e automação de cobrança',
+                title: "Seth",
             }]
         }
     },
