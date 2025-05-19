@@ -32,6 +32,9 @@
                 </UTooltip>
               </div>
             </div>
+            <div class="flex justify-center items-center mt-10">
+              <UIcon name="i-heroicons-arrow-down-circle" class="w-12 h-12" />
+            </div>
           </div>
         </div>
       </div>

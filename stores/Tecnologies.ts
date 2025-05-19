@@ -56,6 +56,10 @@ export const useTecnologiesStore = defineStore('tecnologies', {
                 name: 'PHP',
                 description: '',
                 tag: useTagsStore().getTagsByName(['PHP'])[0],
+            },{
+                name: 'AWS',
+                description: '',
+                tag: useTagsStore().getTagsByName(['AWS'])[0],
             }]
         }
     },
