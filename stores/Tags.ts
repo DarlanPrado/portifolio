@@ -71,6 +71,10 @@ export const useTagsStore = defineStore('tags', {
                 name: 'JQuery',
                 icon: 'i-logos-jquery',
                 color: 'blue',
+            }, {
+                name: 'AWS',
+                icon: 'i-logos-aws',
+                color: 'amber'
             }],
         };
     },

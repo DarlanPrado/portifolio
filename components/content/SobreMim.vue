@@ -25,7 +25,7 @@
         </div>
         <div>
           <div id="divImage" class="flex justify-center items-center teste rounded-full">
-            <NuxtImg src="/avatar.png" width="md:w-[10px] lg:w-full" height="h-full" />
+            <NuxtImg alt="Meu Avatar"  src="/avatar.png" width="md:w-[10px] lg:w-full" height="h-full" preload />
             <div class="flex justify-center">
   
             </div>

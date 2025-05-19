@@ -30,6 +30,12 @@ importers:
       '@iconify-json/grommet-icons':
         specifier: ^1.1.12
         version: 1.1.12
+      '@iconify-json/heroicons':
+        specifier: ^1.2.2
+        version: 1.2.2
+      '@iconify-json/logos':
+        specifier: ^1.2.4
+        version: 1.2.4
       '@nuxt/eslint':
         specifier: ^0.4.0
         version: 0.4.0(eslint@8.57.0)(magicast@0.3.4)(rollup@4.19.2)(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(terser@5.31.3))
@@ -733,8 +739,11 @@ packages:
   '@iconify-json/grommet-icons@1.1.12':
     resolution: {integrity: sha512-uITpfKABP2j/DE78zaMWSZCNGG7TxBzcGMD3zDE3QbHkne+33eIt0OZ7xJlHz6sleEb02x5+m4RK7bS3bVQi0g==}
 
-  '@iconify-json/heroicons@1.1.23':
-    resolution: {integrity: sha512-LLev2ZBBDJKMzjnQgZRhEj0Nkz5m9O4UtQVH2TpPchdXSkxQUUOlPpsM4MVQCs49a2MaJfKiay+48WaZli5cNQ==}
+  '@iconify-json/heroicons@1.2.2':
+    resolution: {integrity: sha512-qoW4pXr5kTTL6juEjgTs83OJIwpePu7q1tdtKVEdj+i0zyyVHgg/dd9grsXJQnpTpBt6/VwNjrXBvFjRsKPENg==}
+
+  '@iconify-json/logos@1.2.4':
+    resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
 
   '@iconify/collections@1.0.445':
     resolution: {integrity: sha512-xvIojlhJ5Xk5+Cj4M5JYvRXjkG5Ur++2ia7/ErUsTKh2eXene2d3JulzG98UvlSl9/WhfUKfE0N56GKttsjExw==}
@@ -2305,6 +2314,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@10.1.0:
@@ -5141,7 +5151,11 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/heroicons@1.1.23':
+  '@iconify-json/heroicons@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/logos@1.2.4':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -5529,7 +5543,7 @@ snapshots:
     dependencies:
       '@headlessui/tailwindcss': 0.2.1(tailwindcss@3.4.7)
       '@headlessui/vue': 1.7.22(vue@3.4.35(typescript@5.5.4))
-      '@iconify-json/heroicons': 1.1.23
+      '@iconify-json/heroicons': 1.2.2
       '@nuxt/icon': 1.4.4(magicast@0.3.4)(rollup@4.19.2)(vite@5.3.5(@types/node@22.1.0)(terser@5.31.3))(vue@3.4.35(typescript@5.5.4))
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.19.2)
       '@nuxtjs/color-mode': 3.4.2(magicast@0.3.4)(rollup@4.19.2)
