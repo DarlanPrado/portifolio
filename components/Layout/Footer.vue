@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="py-16 flex justify-center items-center">
-                    <p>&copy;Copyright 2024 Darlan Prado. Todos os direitos reservados.</p>
+                    <p>&copy;Copyright 2025 Darlan Prado. Todos os direitos reservados.</p>
                 </div>
             </UContainer>
         </footer>
