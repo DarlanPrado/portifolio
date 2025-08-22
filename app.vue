@@ -20,6 +20,7 @@
     </div>
   </div>
 </template>
+<SpeedInsights />
 <script setup lang="ts">
 
 useSeoMeta({
@@ -32,8 +33,8 @@ useSeoMeta({
   twitterDescription: 'Veja meu portfólio e conheça meus projetos e habilidades.',
   twitterImage: '/avatar.png', // Substitua pelo caminho real da imagem
   twitterCard: 'summary'
-})
 
+})
 
 useHead({
   bodyAttrs: {
