@@ -3,7 +3,7 @@
         <UCard class="border-2 border-gray-50/0 hover:border-primary-500" :ui="{ background: 'hover:bg-gray-100 hover:dark:bg-gray-800'}">
             <div class="grid grid-cols-1 sm:flex gap-4">
                 <div class="flex justify-center" >
-                    <NuxtImg v-if="props.data.images?.length" :alt="`${props.data.title} Imagem`" fit="fill" :src="props.data.images![0]" height="110" width="220" preload />
+                    <NuxtImg v-if="props.data.images?.length" :alt="`${props.data.title} Imagem`" fit="fill"  :src="props.data.images![0]" height="110" width="220" format="webp" quality="75" preload/>
                 </div>
                 <div class="w-full">
                     <div>

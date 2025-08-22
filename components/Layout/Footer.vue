@@ -8,9 +8,9 @@
                     </div>
                     <UDivider icon="i-heroicons-qr-code-solid" orientation="vertical" />
                     <div class="flex flex-col gap-2 w-full px-4">
-                        <ULink :to="useLinksStore().getLinks['linkedin']" active-class="text-primary" target="_blank" >Linkedin</ULink>
-                        <ULink :to="useLinksStore().getLinks['github']" active-class="text-primary" target="_blank" >Github</ULink>
-                        <ULink :to="useLinksStore().getLinks['email']" active-class="text-primary" target="_blank" >Email</ULink>
+                        <ULink :to="links['linkedin']" active-class="text-primary" target="_blank" >Linkedin</ULink>
+                        <ULink :to="links['github']" active-class="text-primary" target="_blank" >Github</ULink>
+                        <ULink :to="links['email']" active-class="text-primary" target="_blank" >Email</ULink>
                     </div>
                 </div>
                 <div class="py-16 flex justify-center items-center">
@@ -20,3 +20,6 @@
         </footer>
     </section>
 </template>
+<script setup lang="ts">
+const links = useLinksStore().getLinks
+</script>
