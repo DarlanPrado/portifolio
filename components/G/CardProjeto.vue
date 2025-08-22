@@ -8,13 +8,13 @@
                 <div class="w-full">
                     <div>
                     <div class="flex justify-between">
-                        <h6 class="text-center font-bold text-xl">{{ props.data.title }}</h6>
+                        <h4 class="text-center font-bold text-xl">{{ props.data.title }}</h4>
                         <UButtonGroup>
                         <LazyUTooltip v-if="props.data.link" text="Acessar plataforma">
-                            <UButton color="gray" icon="i-heroicons-link" target="_blank" :to="props.data.link" />
+                            <UButton color="gray" icon="i-heroicons-link" target="_blank" :to="props.data.link" aria-label="Acessar plataforma da ferramenta" />
                         </LazyUTooltip>
                         <LazyUTooltip v-if="props.data.githubLink" text="Ver no Github">
-                            <UButton icon="i-grommet-icons-github" :to="props.data.githubLink" target="_blank" />
+                            <UButton icon="i-grommet-icons-github" :to="props.data.githubLink" target="_blank" aria-label="Acessar projeto no Github" />
                         </LazyUTooltip>
                         </UButtonGroup>
                     </div>

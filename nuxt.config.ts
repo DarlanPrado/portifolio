@@ -15,6 +15,6 @@ export default defineNuxtConfig({
       "Mukta": true
     },
     preload: true
-  }], '@nuxtjs/robots', '@nuxtjs/sitemap'],
+  }], '@nuxtjs/robots', '@nuxtjs/sitemap', "nuxt-link-checker", 'nuxt-vitalizer'],
   icon: ["heroicons", "grommet-icons"],
 })
