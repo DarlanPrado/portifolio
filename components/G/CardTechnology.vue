@@ -5,7 +5,7 @@
                 <div class="flex justify-center items-center mb-2">
                     <UIcon :name="data.tag?.icon || ''" class="w-28 h-28"/>
                 </div>
-                <h6 class="text-center text-4xl font-bold font-bebas">{{ data.name }}</h6>
+                <h4 class="text-center text-4xl font-bold font-bebas">{{ data.name }}</h4>
             </div>
         </UCard>
     </section>
