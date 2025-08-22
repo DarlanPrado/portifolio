@@ -14,7 +14,24 @@ export default defineNuxtConfig({
       "Bebas Neue": true,
       "Mukta": true
     },
-    preload: true
+    preload: true, 
+    prefetch: true,
+    download: true,
+    inject: true 
   }], '@nuxtjs/robots', '@nuxtjs/sitemap', "nuxt-link-checker", 'nuxt-vitalizer'],
   icon: ["heroicons", "grommet-icons"],
+    image: {
+    format: ['avif', 'webp'],
+    quality: 75,
+  },
+  nitro: {
+    serveStatic: true,
+    prerender: {
+      routes: ['/',]
+    }
+  },
+  experimental: {
+    renderJsonPayloads: true,
+    // payloadExtraction: true,
+  },
 })
