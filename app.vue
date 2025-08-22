@@ -5,7 +5,7 @@
       <div class="snap-start">
         <Layout />
       </div>
-      <div class="snap-start snap-always min-h-screen py-20 space-y-10">
+      <div class="snap-start overflow-y-auto max-h-screen min-h-screen py-20 space-y-10 noScrollBar">
         <ContentMeuTrabalho />
         <ContentMeusProjetos />
         <ContentPrincipaisTecnologias />
@@ -24,7 +24,7 @@
 
 useSeoMeta({
   title: 'Darlan Prado - Desenvolvedor Fullstack',
-  description: 'Portfólio de Darlan, desenvolvedor fullstack especializado em Nuxt3, Vue3, Typescript e Tailwind. Confira meus projetos e experiência.',
+  description: 'Portfólio de Darlan, desenvolvedor fullstack. Confira meus projetos e experiência.',
   ogTitle: 'Darlan Prado - Desenvolvedor Fullstack',
   ogDescription: 'Explore o portfólio de Darlan, onde apresento meus projetos, habilidades e experiência como desenvolvedor.',
   ogImage: '/avatar.png', // Substitua pelo caminho real da imagem
@@ -51,5 +51,15 @@ useHead({
     }
   ]
 })
-
 </script>
+<style scoped>
+.noScrollBar {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge antigo */
+}
+
+.noScrollBar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+</style>

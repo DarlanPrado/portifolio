@@ -6,11 +6,12 @@
       </header>
   
       <div class="mx-10 text-lg flex flex-col gap-4">
-        <GCardProjeto ref="card" v-for="project in useProjectsStore().getProjects" :key="project.id" :data="project" />
+        <GCardProjeto ref="card" v-for="project in projects" :key="project.id" :data="project" />
       </div>
     </UContainer>
   </div>
 </template>
 <script setup lang="ts">
+const projects = useProjectsStore().getProjects
 
 </script>

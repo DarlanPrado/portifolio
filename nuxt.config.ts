@@ -9,18 +9,12 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: [
-    "@pinia/nuxt",
-    '@nuxt/ui',
-    '@nuxt/eslint',
-    '@nuxt/image',
-    ['@nuxtjs/google-fonts', {
-      families: {
-        "Bebas Neue": true,
-        "Mukta": true
-      },
-      preload: true
-    }],
-  ],
+  modules: ["@pinia/nuxt", '@nuxt/ui', '@nuxt/eslint', '@nuxt/image', ['@nuxtjs/google-fonts', {
+    families: {
+      "Bebas Neue": true,
+      "Mukta": true
+    },
+    preload: true
+  }], '@nuxtjs/robots', '@nuxtjs/sitemap'],
   icon: ["heroicons", "grommet-icons"],
 })
