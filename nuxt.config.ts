@@ -1,37 +1,51 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
-  app: {
-    head: {
-      meta: [
-        { name: 'google-site-verification', content: 'jvGt8cPvoYQile3Fh5yqwYk3K3qGkPgFE8ozb9bLg2E'}
-      ]
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/ui',
+    '@nuxtjs/html-validator',
+    '@nuxtjs/i18n',
+    '@nuxt/image'
+  ],
+
+  devtools: {
+    enabled: true
+  },
+
+  css: ['~/assets/css/main.css'],
+
+  routeRules: {
+    '/': { prerender: true }
+  },
+
+  compatibilityDate: '2025-01-15',
+
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
     }
   },
-  modules: ["@pinia/nuxt", '@nuxt/ui', '@nuxt/eslint', '@nuxt/image', ['@nuxtjs/google-fonts', {
-    families: {
-      "Bebas Neue": true,
-      "Mukta": true
-    },
-    preload: true, 
-    prefetch: true,
-    download: true,
-    inject: true 
-  }], '@nuxtjs/robots', '@nuxtjs/sitemap', "nuxt-link-checker", 'nuxt-vitalizer'],
-  icon: ["heroicons", "grommet-icons"],
-    image: {
-    format: ['avif', 'webp'],
-    quality: 75,
-  },
-  nitro: {
-    serveStatic: true,
-    prerender: {
-      routes: ['/',]
+
+  i18n: {
+    defaultLocale: 'br',
+    strategy: 'prefix_except_default',
+    locales: [
+      { code: 'us', file: 'us.json', name: 'English' },
+      { code: 'br', file: 'br.json', name: 'Português' }
+    ],
+    customRoutes: 'config',
+    pages: {
+      projects: {
+        us: '/projects',
+        br: '/projetos'
+      },
+      project: {
+        us: '/project',
+        br: '/projeto'
+      }
     }
-  },
-  experimental: {
-    renderJsonPayloads: true,
-    // payloadExtraction: true,
-  },
+  }
 })
