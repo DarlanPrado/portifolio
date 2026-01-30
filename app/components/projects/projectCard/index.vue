@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const { t } = useI18n({
+  useScope: 'local'
+})
+
 interface Props {
   title: string
   description?: string
@@ -6,9 +10,34 @@ interface Props {
   srcImage?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   links: Array<any>
+  to?: string
+  more: string
 }
 
-const { title, description, reverse, srcImage, links } = defineProps<Props>()
+const { title, description, reverse, srcImage, links, to, more } = defineProps<Props>()
+
+const mylinks = []
+
+if (to) {
+  mylinks.push({
+    label: 'Get started',
+    color: 'neutral',
+    to: to,
+    blank: true
+  })
+}
+if (more) {
+  mylinks.push({
+    label: 'Learn more',
+    color: 'neutral',
+    variant: 'subtle',
+    to: more,
+    trailingIcon: 'i-lucide-arrow-right'
+  })
+}
+if (links && links.length > 0) {
+  mylinks.push(...links)
+}
 </script>
 
 <template>
@@ -17,7 +46,7 @@ const { title, description, reverse, srcImage, links } = defineProps<Props>()
     :description
     orientation="horizontal"
     :reverse
-    :links
+    :links="mylinks && mylinks.length ? mylinks : undefined"
   >
     <img
       v-if="srcImage"
@@ -29,3 +58,16 @@ const { title, description, reverse, srcImage, links } = defineProps<Props>()
     >
   </UPageCTA>
 </template>
+
+<i18n lang="json">
+{
+  "us": {
+    "visit": "Go to website",
+    "learn_more": "Learn more"
+  },
+  "br": {
+    "visit": "Visitar site",
+    "learn_more": "Saiba mais"
+  }
+}
+</i18n>
