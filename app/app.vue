@@ -33,12 +33,14 @@ useSeoMeta({
   <UApp>
     <UHeader>
       <template #left>
-        <NuxtLink to="/">
-          Darlan Prado
-        </NuxtLink>
-        <NuxtLink to="/projetos">
-          {{ t('projects') }}
-        </NuxtLink>
+        <div class="flex gap-6">
+          <NuxtLink to="/">
+            Darlan Prado
+          </NuxtLink>
+          <NuxtLink to="/projetos">
+            {{ t('projects') }}
+          </NuxtLink>
+        </div>
       </template>
 
       <template #right>
