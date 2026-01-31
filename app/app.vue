@@ -1,7 +1,9 @@
 <script setup>
-const { t } = useI18n({
-  useScope: 'local'
-})
+const { t, locale } = useI18n()
+
+const isPtBr = computed(() => locale.value === 'br')
+
+const localtePath = useLocalePath()
 
 useHead({
   meta: [
@@ -26,10 +28,10 @@ useSeoMeta({
     <UHeader>
       <template #left>
         <div class="flex gap-6">
-          <NuxtLink to="/">
+          <NuxtLink :to="localtePath('/')">
             Darlan Prado
           </NuxtLink>
-          <NuxtLink to="/projetos">
+          <NuxtLink :to="localtePath('projetos')">
             {{ t('projects') }}
           </NuxtLink>
         </div>
@@ -75,7 +77,7 @@ useSeoMeta({
         <VLibras />
       </template>
     </UFooter>
-    <VLibras />
+    <VLibras v-if="isPtBr" />
   </UApp>
 </template>
 
