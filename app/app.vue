@@ -72,8 +72,10 @@ useSeoMeta({
           color="neutral"
           variant="ghost"
         />
+        <VLibras />
       </template>
     </UFooter>
+    <VLibras />
   </UApp>
 </template>
 

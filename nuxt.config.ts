@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-libras'
   ],
 
   devtools: {
@@ -33,8 +34,8 @@ export default defineNuxtConfig({
     defaultLocale: 'br',
     strategy: 'prefix_except_default',
     locales: [
-      { code: 'us', file: 'us.json', name: 'English' },
-      { code: 'br', file: 'br.json', name: 'Português' }
+      { code: 'us', name: 'English' },
+      { code: 'br', name: 'Português' }
     ],
     customRoutes: 'config',
     pages: {
