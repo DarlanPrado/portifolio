@@ -13,113 +13,40 @@ const { t } = useI18n({
         <ProjectsProjectCard
           title="Portifólio"
           :description="t('portifolio_description')"
-          :links="[
-            {
-              label: 'Get started',
-              color: 'neutral'
-            },
-            {
-              label: 'Learn more',
-              color: 'neutral',
-              variant: 'subtle',
-              trailingIcon: 'i-lucide-arrow-right'
-            }
-          ]"
+          to="/"
         />
         <ProjectsProjectCard
           title="ResumePro"
           reverse
           :description="t('resume_pro_description')"
           src-image="/projects/resume_pro/home.png"
-          :links="[
-            {
-              label: 'Get started',
-              color: 'neutral'
-            },
-            {
-              label: 'Learn more',
-              color: 'neutral',
-              variant: 'subtle',
-              to: '/projeto/resumepro',
-              trailingIcon: 'i-lucide-arrow-right'
-            }
-          ]"
+          more="/projeto/resumepro"
         />
         <ProjectsProjectCard
           title="BashApp"
           :description="t('bash_app_descriptrion')"
           src-image="/projects/bash_app/home.png"
-          :links="[
-            {
-              label: 'Get started',
-              color: 'neutral'
-            },
-            {
-              label: 'Learn more',
-              color: 'neutral',
-              variant: 'subtle',
-              to: '/projeto/bashapp',
-              trailingIcon: 'i-lucide-arrow-right'
-            }
-          ]"
+          more="/projeto/bashapp"
         />
         <ProjectsProjectCard
           title="Seth"
           reverse
           :description="t('seth_total_description')"
           src-image="/projects/seth_total/home.png"
-          :links="[
-            {
-              label: 'Get started',
-              color: 'neutral'
-            },
-            {
-              label: 'Learn more',
-              color: 'neutral',
-              variant: 'subtle',
-              to: '/projeto/seth',
-              trailingIcon: 'i-lucide-arrow-right'
-            }
-          ]"
+          more="/projeto/seth"
         />
         <ProjectsProjectCard
           title="Brasilcap"
           :description="t('brasilcap_description')"
           src-image="/projects/brasilcap/home.png"
-          :links="[
-            {
-              label: 'Get started',
-              color: 'neutral'
-            },
-            {
-              label: 'Learn more',
-              color: 'neutral',
-              variant: 'subtle',
-              to: '/projeto/brasilcap',
-              trailingIcon: 'i-lucide-arrow-right'
-            }
-          ]"
+          more="/projeto/brasilcap"
         />
         <ProjectsProjectCard
           title="Rodobens"
           reverse
           :description="t('rodobens_description')"
           src-image="/projects/rodobens/home.png"
-          :links="[
-            {
-              label: 'Get started',
-              color: 'neutral',
-              to: '/teste',
-              blank: true
-            },
-            {
-              label: 'Learn more',
-              color: 'neutral',
-              variant: 'subtle',
-              to: '/projeto/rodobens',
-              trailingIcon: 'i-lucide-arrow-right'
-            }
-          ]"
+          more="/projeto/rodobens"
         />
       </UPageBody>
     </UContainer>

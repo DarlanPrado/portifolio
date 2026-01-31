@@ -9,9 +9,9 @@ interface Props {
   reverse?: boolean
   srcImage?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  links: Array<any>
+  links?: Array<any>
   to?: string
-  more: string
+  more?: string
 }
 
 const { title, description, reverse, srcImage, links, to, more } = defineProps<Props>()
@@ -20,7 +20,7 @@ const mylinks = []
 
 if (to) {
   mylinks.push({
-    label: 'Get started',
+    label: t('visit'),
     color: 'neutral',
     to: to,
     blank: true
@@ -28,7 +28,7 @@ if (to) {
 }
 if (more) {
   mylinks.push({
-    label: 'Learn more',
+    label: t('learn_more'),
     color: 'neutral',
     variant: 'subtle',
     to: more,
