@@ -1,0 +1,23 @@
+---
+description: Manutenção das skills em .agents/skills
+globs: .agents/skills/**/*.md
+alwaysApply: false
+---
+
+# Skills para agentes (`.agents/skills`)
+
+## Estrutura
+
+- Cada skill vive em uma pasta (ex.: `nuxt/`, `nuxt-ui/`) com **`SKILL.md`** como entrada.
+- Conteúdo longo ou referência: arquivos em **`references/`** linkados a partir do `SKILL.md`.
+
+## Frontmatter
+
+- Mantenha o bloco YAML no topo do `SKILL.md` com pelo menos `name` e `description` claros (o Cursor usa isso para sugerir skills).
+- `description` deve dizer **quando** usar a skill (ex.: “Use ao trabalhar com server routes…”).
+
+## Estilo
+
+- Tabelas e listas curtas na entrada; detalhes nos `references/*.md`.
+- Links relativos entre `SKILL.md` e `references/` devem permanecer válidos após renomear arquivos.
+- Não duplique regras inteiras do `.cursor/rules/` dentro da skill — **complemente** com profundidade técnica.

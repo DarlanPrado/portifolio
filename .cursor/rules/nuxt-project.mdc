@@ -1,0 +1,28 @@
+---
+description: Convenções Nuxt 4 e stack deste portfólio
+globs: nuxt.config.ts,app/app.config.ts,package.json,eslint.config.mjs,app/**/*.vue
+alwaysApply: false
+---
+
+# Nuxt e projeto
+
+## Stack
+
+- **Nuxt 4** com código em `app/` (`app.vue`, `pages/`, `components/`, `assets/`).
+- Módulos atuais em `nuxt.config.ts`: `@nuxt/eslint`, `@nuxt/ui`, `@nuxtjs/html-validator`, `@nuxtjs/i18n`, `@nuxt/image`, `nuxt-libras`, `@nuxtjs/mdc`.
+- CSS global: `app/assets/css/main.css` (Tailwind v4 + `@nuxt/ui`).
+
+## Configuração
+
+- Alterações de build, módulos e `routeRules` → `nuxt.config.ts`.
+- Tema de cores Nuxt UI (`primary`, `neutral`) → `app/app.config.ts`.
+- ESLint → `eslint.config.mjs` (padrão `@nuxt/eslint` / `withNuxt`).
+
+## Vue SFC
+
+- Prefira `<script setup lang="ts">` em **novos** arquivos e features; o repositório pode ter mistura legada sem `lang="ts"`.
+- Use auto-imports do Nuxt quando disponíveis; não reinvente composables já oferecidos pelo framework.
+
+## Referência rápida
+
+- Detalhes de estrutura, `useFetch`, Nitro, SSR → `.agents/skills/nuxt/SKILL.md`.

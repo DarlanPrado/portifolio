@@ -1,0 +1,24 @@
+---
+description: i18n e rotas localizadas (@nuxtjs/i18n)
+globs: nuxt.config.ts,app/**/*.vue
+alwaysApply: false
+---
+
+# i18n e roteamento
+
+## Configuração (`nuxt.config.ts`)
+
+- `defaultLocale: 'br'`, `strategy: 'prefix_except_default'`.
+- Locales: **`br`** e **`us`** (não use `en` como código de locale neste projeto).
+- Rotas customizadas: `customRoutes: 'config'` e mapeamento em `i18n.pages` (ex.: `projects`/`projetos`).
+
+## Nos componentes e páginas
+
+- Traduções locais: bloco `<i18n lang="json">` com chaves top-level **`"us"`** e **`"br"`**.
+- `useI18n({ useScope: 'local' })` quando as strings vêm do bloco `<i18n>` do mesmo SFC.
+- Links e navegação: **`useLocalePath()`** para prefixar rotas corretamente; troca de idioma com `useSwitchLocalePath` + `navigateTo` quando já existir esse padrão no projeto.
+- Rotas em `to:` internas devem ser compatíveis com a estratégia de i18n (evite hardcode que ignore o locale ativo).
+
+## Atenção
+
+- `htmlAttrs.lang` pode estar fixo em `pt-BR` no shell; ao alterar SEO/a11y, alinhe com o comportamento desejado por locale.

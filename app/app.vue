@@ -34,6 +34,9 @@ useSeoMeta({
           <NuxtLink :to="localtePath('projetos')">
             {{ t('projects') }}
           </NuxtLink>
+          <NuxtLink :to="localtePath('bibliotecas')">
+            {{ t('libraries') }}
+          </NuxtLink>
         </div>
       </template>
 
@@ -85,11 +88,12 @@ useSeoMeta({
 {
   "us": {
     "projects": "Projects",
-    "articles": "Articles",
+    "libraries": "Libraries",
     "createdBy": "Built with"
   },
   "br": {
     "projects": "Projetos",
+    "libraries": "Bibliotecas",
     "createdBy": "Criado por"
   }
 }
