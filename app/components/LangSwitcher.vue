@@ -3,6 +3,10 @@ const { locale, locales } = useI18n()
 const availableLocales = locales
 const switchLocalePath = useSwitchLocalePath()
 const languageSelected = ref(locale.value)
+
+watch(locale, (code) => {
+  languageSelected.value = code
+})
 </script>
 
 <template>

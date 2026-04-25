@@ -1,26 +1,27 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t } = useI18n({ useScope: 'local' })
+const localePath = useLocalePath()
 
-const cards = [
+const cards = computed(() => [
   {
     title: t('title-nuxt-yup'),
     description: t('description-nuxt-yup'),
     icon: 'i-lucide-shield-check',
-    to: '/biblioteca/nuxt-yup'
+    to: localePath('/biblioteca/nuxt-yup')
   },
   {
     title: t('title-nuxt-libras'),
     description: t('description-nuxt-libras'),
     icon: 'i-lucide-a-large-small',
-    to: '/biblioteca/nuxt-libras'
+    to: localePath('/biblioteca/nuxt-libras')
   },
   {
     title: t('title-real-cep'),
     description: t('description-real-cep'),
     icon: 'i-lucide-map-pin',
-    to: '/biblioteca/real-cep'
+    to: localePath('/biblioteca/real-cep')
   }
-]
+])
 </script>
 
 <template>

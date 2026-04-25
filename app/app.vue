@@ -1,11 +1,11 @@
 <script setup>
-const { t, locale } = useI18n()
+const { t, locale } = useI18n({ useScope: 'local' })
 
 const isPtBr = computed(() => locale.value === 'br')
 
-const localtePath = useLocalePath()
+const localePath = useLocalePath()
 
-useHead({
+useHead(() => ({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
@@ -13,13 +13,13 @@ useHead({
     { rel: 'icon', href: '/favicon.ico' }
   ],
   htmlAttrs: {
-    lang: 'pt-BR'
+    lang: locale.value === 'br' ? 'pt-BR' : 'en-US'
   }
-})
+}))
 
 useSeoMeta({
-  title: 'Darlan Prado - Fullstack Developer',
-  description: 'Desenvolvedor Fullstack especializado em criar aplicações web escaláveis e de alta performance utilizando tecnologias modernas como Nuxt.js, Node.js e AWS.'
+  title: () => t('seoTitle'),
+  description: () => t('seoDescription')
 })
 </script>
 
@@ -28,14 +28,11 @@ useSeoMeta({
     <UHeader>
       <template #left>
         <div class="flex gap-6">
-          <NuxtLink :to="localtePath('/')">
+          <NuxtLink :to="localePath('/')">
             Darlan Prado
           </NuxtLink>
-          <NuxtLink :to="localtePath('projetos')">
+          <NuxtLink :to="localePath('projetos')">
             {{ t('projects') }}
-          </NuxtLink>
-          <NuxtLink :to="localtePath('bibliotecas')">
-            {{ t('libraries') }}
           </NuxtLink>
         </div>
       </template>
@@ -77,10 +74,10 @@ useSeoMeta({
           color="neutral"
           variant="ghost"
         />
-        <VLibras />
+        <!-- VLibras: plugin instancia Widget uma vez — v-if quebrava ao remontar; v-show só oculta o markup [vw] -->
+        <VLibras v-show="isPtBr" :aria-hidden="!isPtBr" />
       </template>
     </UFooter>
-    <VLibras v-if="isPtBr" />
   </UApp>
 </template>
 
@@ -88,13 +85,15 @@ useSeoMeta({
 {
   "us": {
     "projects": "Projects",
-    "libraries": "Libraries",
-    "createdBy": "Built with"
+    "createdBy": "Built with",
+    "seoTitle": "Darlan Prado - Fullstack Developer",
+    "seoDescription": "Fullstack developer focused on scalable, high-performance web applications with Nuxt.js, Node.js, and AWS."
   },
   "br": {
     "projects": "Projetos",
-    "libraries": "Bibliotecas",
-    "createdBy": "Criado por"
+    "createdBy": "Criado por",
+    "seoTitle": "Darlan Prado - Desenvolvedor Fullstack",
+    "seoDescription": "Desenvolvedor Fullstack especializado em criar aplicações web escaláveis e de alta performance utilizando tecnologias modernas como Nuxt.js, Node.js e AWS."
   }
 }
 </i18n>
