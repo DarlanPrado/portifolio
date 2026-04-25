@@ -1,7 +1,22 @@
 <script setup lang="ts">
+import type { TechStackSlug } from '~/utils/techStack'
+
 const { t } = useI18n({
   useScope: 'local'
 })
+
+const technologies = [
+  'nuxt',
+  'vue',
+  'typescript',
+  'tailwind',
+  'pinia',
+  'aws',
+  'docker',
+  'golang',
+  'grafana',
+  'jenkins'
+] as const satisfies readonly TechStackSlug[]
 </script>
 
 <template>
@@ -15,39 +30,26 @@ const { t } = useI18n({
             class="rounded-2xl"
             src="/projects/bash_app/home.png"
           />
-          <div class="mx-4">
-            <p>{{ t('p1') }}</p>
-            <ul class="my-4 flex flex-col gap-2">
-              <li class="ml-4">
-                • SoftPhone: {{ t('li1') }}
-              </li>
-              <li class="ml-4">
-                • Discador: {{ t('li2') }}
-              </li>
-              <li class="ml-4">
-                • Webchat: {{ t('li3') }}
-              </li>
-              <li class="ml-4">
-                • ChatBot: {{ t('li4') }}
-              </li>
-            </ul>
-            <p>{{ t('p2') }}</p>
-            <br>
-            <p>{{ t('p3') }}</p>
-            <p>{{ t('p4') }}</p>
+          <div class="mx-4 space-y-8">
+            <section>
+              <h3 class="mb-3 text-2xl font-semibold text-default">
+                {{ t('about_title') }}
+              </h3>
+              <div class="space-y-3 text-muted">
+                <p>{{ t('about_p1') }}</p>
+              </div>
+            </section>
+            <section>
+              <h3 class="mb-3 text-2xl font-semibold text-default">
+                {{ t('contribution_title') }}
+              </h3>
+              <div class="space-y-3 text-muted">
+                <p>{{ t('contribution_p1') }}</p>
+                <p>{{ t('contribution_p2') }}</p>
+              </div>
+            </section>
           </div>
-          <div class="grid grid-cols-4 gap-2">
-            <TechCardNuxt />
-            <TechCardVue />
-            <TechCardTypeScript />
-            <TechCardTailwind />
-            <TechCardPinia />
-            <TechCardAws />
-            <TechCardDocker />
-            <TechCardGolang />
-            <TechCardGrafana />
-            <TechCardJenkins />
-          </div>
+          <ProjectsProjectTechBadges :technologies="[...technologies]" />
         </UPageBody>
       </UContainer>
     </UContainer>
@@ -57,24 +59,18 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "p1": "Bash is a platform that provides access to a variety of communication products, including:",
-    "li1": "A VoIP software that lets you make and receive calls without a physical phone, offering real-time call monitoring and analytics.",
-    "li2": "A dialing system that allows you to make multiple outbound calls to different numbers with customizable settings to create your own call strategies.",
-    "li3": "A live chat solution integrated into the client’s website or WhatsApp, where customers are assisted by a real agent.",
-    "li4": "An automated chat system integrated into the client’s website or WhatsApp, using a predefined question-and-answer flow (chatbot).",
-    "p2": "It also supports multichannel communication, integrating WhatsApp, Instagram, and Facebook in one place.",
-    "p3": "Overall, the platform is designed for customer service companies, offering a wide range of options for how your team can operate and manage interactions.",
-    "p4": "It also provides personalized support, where we build tailor-made solutions from scratch to meet each client’s specific needs."
+    "about_title": "About the project",
+    "about_p1": "Platform built for Bash Technology, a Santa Catarina–based company focused on business communications — born from a call-center operation and evolved to build its own customer-service tools. The system centralizes access to Bash products: SoftPhone, dialer, web chat, and chatbot, with multichannel support integrating WhatsApp, Instagram, and Facebook in one place.",
+    "contribution_title": "My contribution",
+    "contribution_p1": "I worked as a full-stack developer responsible for designing, building, and maintaining the entire frontend with Nuxt.js and Vue.js. On the backend, I contributed with Laravel and Golang on critical features, system integration, and process optimization.",
+    "contribution_p2": "Major challenges included integrating the webphone (Asterisk) and chatbot (Twilio) with legacy systems, managing real-time communication over WebSocket, and optimizing flows for high concurrent load. The platform served around 200 operators and more than 5,000 customers per month."
   },
   "br": {
-    "p1": "Plataforma da Bash para acessar diversos produtos, entre eles:",
-    "li1": "Software para realizar e receber chamadas utilizando VoIP, sem precisar de um telefone fisico, além de disponibilizar monitoramento em tempo real",
-    "li2": "Software que permite realizar diversas discagens para váriios numeros, disponibilizando diversas configurações que permite você criar sua própia estratégia",
-    "li3": "Chat de atendimento personalizado incluso no site do cliente ou via WhatsApp, sendo atendido por um atendente",
-    "li4": "Chat de atendimento personalizado incluso no site do cliente ou via WhatsApp, onde o mesmo segue uma arvore de perguntas e recebe respostas pré definidas",
-    "p2": "Além de permitir multicanais, que integram whatsapp, instagram, facebook, em um unico lugar",
-    "p3": "No geral a plataforma é voltada para empresas de atendimento ao cliente, e disponibiliza uma vasta opção da forma como você pode trabalhar e como trabalhar,",
-    "p4": "além de forncer atendimento personalizado, onde criamos uma solução do zero, onde criamos um projeto personalizado para atender a sua necessidade"
+    "about_title": "Sobre o projeto",
+    "about_p1": "Plataforma desenvolvida para a Bash Technology, empresa catarinense especializada em comunicação empresarial — nascida de uma operação de call center e que evoluiu para criar suas próprias ferramentas de atendimento. O sistema centraliza o acesso a todos os produtos da Bash: SoftPhone, Discador, Webchat e ChatBot, além de suporte a multicanais integrando WhatsApp, Instagram e Facebook em um único lugar.",
+    "contribution_title": "Minha contribuição",
+    "contribution_p1": "Atuei como desenvolvedor Full Stack responsável por projetar, desenvolver e manter todo o frontend da plataforma com Nuxt.js e Vue.js. No backend, contribuí com Laravel e Golang no desenvolvimento de funcionalidades críticas, integração de sistemas e otimização de processos.",
+    "contribution_p2": "Entre os principais desafios esteve a integração do webphone (Asterisk) e do chatbot (Twilio) com sistemas legados, o gerenciamento de comunicação em tempo real via WebSocket e a otimização de fluxos para suportar alto volume simultâneo. A plataforma chegou a atender cerca de 200 operadores e mais de 5 mil clientes por mês."
   }
 }
 </i18n>

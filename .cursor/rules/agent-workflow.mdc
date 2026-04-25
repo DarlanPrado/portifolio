@@ -1,0 +1,40 @@
+---
+description: Fluxo de trabalho geral para LLMs e agentes neste repositório
+alwaysApply: true
+---
+
+# Fluxo de agentes e LLMs
+
+## Idioma e tom
+
+- Responda ao usuário em **português brasileiro (PT-BR)**.
+- Seja direto; cite caminhos de arquivo quando relevante.
+
+## Ferramentas e comandos
+
+- Gerenciador de pacotes: **pnpm** (ver `packageManager` em `package.json`).
+- Após mudanças relevantes em TypeScript/Vue, rode quando fizer sentido: `pnpm lint` e `pnpm typecheck`.
+- Não assuma `npm`/`yarn` como padrão neste projeto.
+
+## Fontes de verdade (skills locais)
+
+Antes de alterar Nuxt, rotas, dados ou Nitro, leia a entrada:
+
+- `.agents/skills/nuxt/SKILL.md` e, se precisar, os `references/` citados lá.
+
+Antes de alterar UI com componentes `U*`, tema ou formulários Nuxt UI:
+
+- `.agents/skills/nuxt-ui/SKILL.md` e os `references/` indicados na skill (ex.: theming, components).
+
+Evite duplicar documentação longa nas rules; **aponte para as skills** quando o detalhe estiver lá.
+
+## Uso de múltiplos agentes
+
+- Para **exploração ampla** (várias pastas, padrões desconhecidos), prefira **vários agentes em paralelo** com escopos distintos (ex.: um para `app/pages`, outro para `app/components`, outro para config).
+- Para **edições pequenas e localizadas**, um único fluxo costuma bastar.
+- Ao delegar, descreva **caminhos**, **objetivo** e **o que devolver** no final (lista de arquivos + conclusões).
+
+## Segurança e escopo
+
+- Não exponha segredos; use variáveis de ambiente e `runtimeConfig` quando aplicável (ver skill Nuxt).
+- Não altere o plano em `.cursor/plans/` salvo pedido explícito do usuário.

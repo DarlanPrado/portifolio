@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/html-validator',
     '@nuxtjs/i18n',
     '@nuxt/image',
-    'nuxt-libras'
+    'nuxt-libras',
+    '@nuxtjs/mdc'
   ],
 
   devtools: {

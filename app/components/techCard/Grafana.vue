@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "Grafana is an observability platform used to visualize and monitor data in real time, creating interactive dashboards from various sources such as databases and metrics services."
+    "description": "I implemented it on BashApp to monitor active calls, errors, and performance in real time — catching issues before they hit users."
   },
   "br": {
-    "description": "Grafana é uma plataforma de observabilidade usada para visualizar e monitorar dados em tempo real, criando painéis interativos a partir de diversas fontes como bancos de dados e serviços de métricas."
+    "description": "Implementei na BashApp para monitorar em tempo real métricas como chamadas ativas, erros e performance — permitindo identificar problemas antes que afetem os usuários."
   }
 }
 </i18n>

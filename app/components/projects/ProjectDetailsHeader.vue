@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const localePath = useLocalePath()
+
 const { t } = useI18n({
   useScope: 'local'
 })
@@ -8,18 +10,22 @@ interface Props {
 }
 
 const { title } = defineProps<Props>()
+
+const headerLinks = computed(() => [
+  {
+    label: t('back'),
+    color: 'neutral' as const,
+    variant: 'subtle' as const,
+    to: localePath('projetos'),
+    trailingIcon: 'i-lucide-arrow-right'
+  }
+])
 </script>
 
 <template>
   <UPageHeader
     :title
-    :links="[{
-      label: t('back'),
-      color: 'neutral',
-      variant: 'subtle',
-      to: '/projetos',
-      trailingIcon: 'i-lucide-arrow-right'
-    }]"
+    :links="headerLinks"
   />
 </template>
 

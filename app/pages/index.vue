@@ -3,6 +3,8 @@ const { t } = useI18n({
   useScope: 'local'
 })
 
+const localePath = useLocalePath()
+
 const features = ref([
   {
     title: 'Frontend',
@@ -31,22 +33,124 @@ const features = ref([
       />
       <GithubData />
       <UPageSection
+        id="stacks"
         :title="t('title_section')"
         :features
       >
-        <div
-          class="grid grid-cols-2 gap-4"
-        >
-          <TechCardNuxt />
-          <TechCardVue />
-          <TechCardNode />
-          <TechCardLaravel />
-          <TechCardTypeScript />
-          <TechCardPhp />
-          <TechCardAws />
-          <TechCardDocker />
-          <TechCardGrafana />
-          <TechCardJenkins />
+        <div class="flex flex-col gap-10">
+          <div>
+            <h3 class="mb-3 text-2xl font-semibold text-default">
+              {{ t('stack_group_frontend') }}
+            </h3>
+            <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+              <div
+                id="nuxt"
+                class="scroll-mt-28"
+              >
+                <TechCardNuxt />
+              </div>
+              <div
+                id="vue"
+                class="scroll-mt-28"
+              >
+                <TechCardVue />
+              </div>
+              <div
+                id="typescript"
+                class="scroll-mt-28"
+              >
+                <TechCardTypeScript />
+              </div>
+              <div
+                id="tailwind"
+                class="scroll-mt-28"
+              >
+                <TechCardTailwind />
+              </div>
+              <div
+                id="pinia"
+                class="scroll-mt-28"
+              >
+                <TechCardPinia />
+              </div>
+              <div
+                id="vuetify"
+                class="scroll-mt-28"
+              >
+                <TechCardVuetify />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-3 text-2xl font-semibold text-default">
+              {{ t('stack_group_backend') }}
+            </h3>
+            <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+              <div
+                id="node"
+                class="scroll-mt-28"
+              >
+                <TechCardNode />
+              </div>
+              <div
+                id="php"
+                class="scroll-mt-28"
+              >
+                <TechCardPhp />
+              </div>
+              <div
+                id="laravel"
+                class="scroll-mt-28"
+              >
+                <TechCardLaravel />
+              </div>
+              <div
+                id="golang"
+                class="scroll-mt-28"
+              >
+                <TechCardGolang />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-3 text-2xl font-semibold text-default">
+              {{ t('stack_group_infra') }}
+            </h3>
+            <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+              <div
+                id="aws"
+                class="scroll-mt-28"
+              >
+                <TechCardAws />
+              </div>
+              <div
+                id="docker"
+                class="scroll-mt-28"
+              >
+                <TechCardDocker />
+              </div>
+              <div
+                id="jenkins"
+                class="scroll-mt-28"
+              >
+                <TechCardJenkins />
+              </div>
+              <div
+                id="grafana"
+                class="scroll-mt-28"
+              >
+                <TechCardGrafana />
+              </div>
+              <div
+                id="gitlab"
+                class="scroll-mt-28"
+              >
+                <TechCardGitlab />
+              </div>
+            </div>
+          </div>
         </div>
       </UPageSection>
       <UPageSection>
@@ -56,7 +160,7 @@ const features = ref([
           orientation="horizontal"
           :links="[{
             label: 'Ver Projetos',
-            to: '/projetos',
+            to: localePath('projetos'),
             trailingIcon: 'i-lucide-arrow-right',
             color: 'neutral'
           }]"
@@ -107,6 +211,9 @@ const features = ref([
   "us": {
     "title_page": "Fullstack Developer",
     "title_section": "Main Stacks",
+    "stack_group_frontend": "Frontend",
+    "stack_group_backend": "Backend",
+    "stack_group_infra": "Infrastructure",
     "frontend_description": "Experience in developing modern and responsive interfaces, focusing on performance, accessibility, and good user experience.",
     "backend_description": "Creation and integration of APIs, data management, and business logic with a focus on security, scalability, and best architectural practices.",
     "devops_title": "DevOps / Tools",
@@ -120,6 +227,9 @@ const features = ref([
   "br": {
     "title_page": "Desenvolvedor Fullstack",
     "title_section": "Principais Stacks",
+    "stack_group_frontend": "Frontend",
+    "stack_group_backend": "Backend",
+    "stack_group_infra": "Infraestrutura",
     "frontend_description": "Experiência em desenvolvimento de interfaces modernas e responsivas, com foco em performance, acessibilidade e boa experiência do usuário.",
     "backend_description": "Criação e integração de APIs, gerenciamento de dados e lógica de negócio com foco em segurança, escalabilidade e boas práticas de arquitetura.",
     "devops_title": "DevOps / Ferramentas",

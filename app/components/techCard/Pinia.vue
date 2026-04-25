@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "Pinia is a simple and intuitive state management library for Vue that replaces Vuex, offering better typing, reactivity, and integration with Vue 3."
+    "description": "The state management I use to handle complex on-screen data — essential on dashboards with lots of real-time information, like BashApp."
   },
   "br": {
-    "description": "Pinia é uma biblioteca de gerenciamento de estado para Vue, simples e intuitiva, que substitui o Vuex oferecendo melhor tipagem, reatividade e integração com o Vue 3"
+    "description": "Gerenciamento de estado que uso para controlar dados complexos na tela — essencial em dashboards com muitas informações em tempo real, como na BashApp."
   }
 }
 </i18n>

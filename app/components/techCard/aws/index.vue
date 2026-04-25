@@ -6,7 +6,7 @@ const { t } = useI18n({
 
 <template>
   <UPageCard
-    title="Aws"
+    title="AWS"
     :description="t('description')"
     icon="i-logos-aws"
 
@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "AWS (Amazon Web Services) is a cloud computing platform that offers services such as hosting, databases, storage, and deployment tools on a global scale."
+    "description": "The cloud infrastructure I use to host and scale production systems — present across almost all my projects, ensuring availability and security."
   },
   "br": {
-    "description": "AWS (Amazon Web Services) é uma plataforma de computação em nuvem que oferece serviços como hospedagem, banco de dados, armazenamento e ferramentas de deploy em escala global."
+    "description": "Infraestrutura de nuvem que uso para hospedar e escalar sistemas em produção — presente em quase todos os projetos, garantindo disponibilidade e segurança."
   }
 }
 </i18n>

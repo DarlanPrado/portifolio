@@ -1,0 +1,30 @@
+---
+description: Nuxt UI v4, Tailwind e tokens visuais do portfólio
+globs: app/**/*.vue,app/app.config.ts,app/assets/**/*.css
+alwaysApply: false
+---
+
+# Design system (Nuxt UI + Tailwind)
+
+## Shell obrigatório
+
+- Aplicação envolta em **`UApp`** no root (`app/app.vue`) — necessário para toasts, overlays e comportamento global do Nuxt UI.
+
+## Layout de páginas
+
+- Padrões comuns neste repo: `UPage`, `UContainer`, `UPageHeader`, `UPageBody`, `UPageGrid`, `UPageCard`, `UCard`, `UButton`, `UHeader`, `UMain`, `UFooter`, `UColorModeButton`.
+- Prefira componentes **`U*`** em vez de reconstruir o mesmo padrão com HTML cru quando já existir equivalente.
+
+## Tema e cores
+
+- Cores semânticas em `app/app.config.ts`: `ui.colors.primary` e `neutral` (ex.: `sky` / `zinc`).
+- Em estilos utilitários, siga orientação da skill Nuxt UI: **classes semânticas** (`text-muted`, `bg-elevated`, etc.) em vez de paleta Tailwind “crua” quando possível.
+- Tokens custom em `app/assets/css/main.css` (`@theme static`, fonte Public Sans, escala `green-*`). Não remova `@import "tailwindcss"` nem `@import "@nuxt/ui"` sem substituir por solução equivalente.
+
+## Ícones
+
+- Formato Iconify: `i-{collection}-{nome}` (ex.: `i-lucide-*`, `i-simple-icons-*`). Coleções usadas no projeto estão em `package.json` (`@iconify-json/*`).
+
+## Detalhes de componentes
+
+- Para slots, variantes e overrides (`ui` prop): consulte `.agents/skills/nuxt-ui/SKILL.md` e `references/theming.md` / `references/components.md`.

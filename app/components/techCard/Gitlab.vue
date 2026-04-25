@@ -6,8 +6,8 @@ const { t } = useI18n({
 
 <template>
   <UPageCard
-    title="Gitlab"
-    :description="t('')"
+    title="GitLab"
+    :description="t('description')"
     icon="i-logos-gitlab-icon"
 
     spotlight
@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "GitLab is a complete DevOps platform that combines Git repositories, continuous integration (CI/CD), and project management tools in a single environment."
+    "description": "I used it at Brasilcap for versioning and organizing the development workflow — clear records of who changed what, when, and why."
   },
   "br": {
-    "description": "GitLab é uma plataforma completa de DevOps que combina repositórios Git, integração contínua (CI/CD) e ferramentas de gerenciamento de projetos em um único ambiente."
+    "description": "Usei no Brasilcap para versionamento e organização do fluxo de desenvolvimento — controle de quem alterou o quê, quando e por quê."
   }
 }
 </i18n>

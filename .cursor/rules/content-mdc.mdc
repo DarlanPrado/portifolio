@@ -1,0 +1,21 @@
+---
+description: Conteúdo Markdown/MDC e módulo @nuxtjs/mdc
+globs: app/pages/**/*.vue,app/**/*.md,app/**/*.mdc,content/**/*
+alwaysApply: false
+---
+
+# Conteúdo e MDC
+
+## Estado do projeto
+
+- `@nuxtjs/mdc` está registrado em `nuxt.config.ts`. **Não invente** pastas `content/` ou fluxos MDC completos se ainda não existirem no repositório — confirme antes de propor estrutura nova.
+
+## Boas práticas
+
+- Páginas que forem exibir markdown/MDC devem seguir a documentação oficial do Nuxt MDC e manter consistência com **Nuxt UI** (`UPage*`, tipografia, espaçamento).
+- Texto voltado ao usuário: mantenha **PT-BR** e **`us`/`br`** alinhados ao padrão i18n do projeto quando houver tradução.
+
+## Quando adicionar conteúdo
+
+- Prefira um único lugar canônico para MD/MDC (ex.: `content/` ou convenção que o time definir) e documente no PR/commit.
+- Imagens: use `@nuxt/image` (`NuxtImg`) quando fizer sentido para performance.

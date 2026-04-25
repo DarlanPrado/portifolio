@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "Nuxt is a Vue-based framework that makes it easy to create modern web applications by offering server-side rendering (SSR), automated routing, and performance optimizations."
+    "description": "The framework I use as the foundation for my fullstack projects. It helps pages load faster and rank better in search — I used it on BashApp, Rodobens, and ResumePro."
   },
   "br": {
-    "description": "Nuxt é um framework baseado em Vue que facilita a criação de aplicações web modernas, oferecendo renderização do lado do servidor (SSR), rotas automáticas e otimizações de performance."
+    "description": "Framework que uso como base nos meus projetos fullstack. Ele permite que as páginas carreguem mais rápido e sejam melhores indexadas — usei em BashApp, Rodobens e ResumePro."
   }
 }
 </i18n>
