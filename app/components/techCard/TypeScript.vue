@@ -6,7 +6,7 @@ const { t } = useI18n({
 
 <template>
   <UPageCard
-    title="Typescript"
+    title="TypeScript"
     :description="t('description')"
     icon="i-logos-typescript-icon"
 
@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "TypeScript is a superset of JavaScript that adds static typing and advanced features, helping you write safer, more organized, and easier-to-maintain code."
+    "description": "I write all my code with static typing — it cuts down production bugs and makes maintenance easier, especially in financial systems where precision is critical."
   },
   "br": {
-    "description": "TypeScript é um superset do JavaScript que adiciona tipagem estática e recursos avançados, ajudando a escrever código mais seguro, organizado e fácil de manter."
+    "description": "Escrevo todo meu código com tipagem estática — isso reduz bugs em produção e facilita a manutenção, especialmente em sistemas financeiros onde precisão é crítica."
   }
 }
 </i18n>

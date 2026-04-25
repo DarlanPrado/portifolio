@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "Tailwind is a utility CSS framework that allows you to quickly create custom interfaces using predefined classes to style directly in HTML."
+    "description": "The tool I use to build interfaces with visual consistency and speed — I adopted it on BashApp and Rodobens to ship a clean frontend without sacrificing quality."
   },
   "br": {
-    "description": "Tailwind é um framework CSS utilitário que permite criar interfaces personalizadas rapidamente, usando classes pré-definidas para estilizar diretamente no HTML."
+    "description": "Ferramenta que uso para construir interfaces com consistência visual e velocidade — adotei em BashApp e Rodobens para entregar um frontend limpo sem abrir mão da qualidade."
   }
 }
 </i18n>

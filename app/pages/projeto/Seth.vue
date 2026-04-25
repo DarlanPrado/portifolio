@@ -1,7 +1,18 @@
 <script setup lang="ts">
+import type { TechStackSlug } from '~/utils/techStack'
+
 const { t } = useI18n({
   useScope: 'local'
 })
+
+const technologies = [
+  'vue',
+  'typescript',
+  'vuetify',
+  'php',
+  'laravel',
+  'aws'
+] as const satisfies readonly TechStackSlug[]
 </script>
 
 <template>
@@ -57,14 +68,7 @@ const { t } = useI18n({
               {{ t('p2') }}
             </p>
           </div>
-          <div class="flex flex-wrap gap-4">
-            <TechCardVue />
-            <TechCardTypeScript />
-            <TechCardVuetify />
-            <TechCardPhp />
-            <TechCardLaravel />
-            <TechCardAws />
-          </div>
+          <ProjectsProjectTechBadges :technologies="[...technologies]" />
         </UPageBody>
       </UContainer>
     </UContainer>

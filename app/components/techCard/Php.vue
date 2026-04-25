@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "PHP is a programming language geared towards web development, primarily used on the server side to create dynamic and interactive websites."
+    "description": "Part of the stack I shaped at Seth for financial logic — alongside Laravel for integrations with Serasa, billing, PIX, and collections automation for companies."
   },
   "br": {
-    "description": "PHP é uma linguagem de programação voltada para o desenvolvimento web, usada principalmente no lado do servidor para criar sites dinâmicos e interativos."
+    "description": "Linguagem do backend que integrei no Seth com Laravel para toda a lógica financeira — integrações com Serasa, emissão de boletos, PIX e automação de cobrança."
   }
 }
 </i18n>

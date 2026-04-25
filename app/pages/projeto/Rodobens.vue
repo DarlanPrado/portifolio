@@ -1,7 +1,19 @@
 <script setup lang="ts">
+import type { TechStackSlug } from '~/utils/techStack'
+
 const { t } = useI18n({
   useScope: 'local'
 })
+
+const technologies = [
+  'nuxt',
+  'vue',
+  'typescript',
+  'tailwind',
+  'pinia',
+  'aws',
+  'docker'
+] as const satisfies readonly TechStackSlug[]
 </script>
 
 <template>
@@ -21,15 +33,7 @@ const { t } = useI18n({
             <p>{{ t('p3') }}</p>
             <p>{{ t('p4') }}</p>
           </div>
-          <div class="flex flex-wrap gap-4">
-            <TechCardNuxt />
-            <TechCardVue />
-            <TechCardTypeScript />
-            <TechCardTailwind />
-            <TechCardPinia />
-            <TechCardAws />
-            <TechCardDocker />
-          </div>
+          <ProjectsProjectTechBadges :technologies="[...technologies]" />
         </UPageBody>
       </UContainer>
     </UContainer>

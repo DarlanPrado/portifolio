@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "Jenkins is an automation tool focused on continuous integration and continuous delivery (CI/CD), allowing you to build, test, and deploy applications in an automated way."
+    "description": "I automated BashApp’s delivery pipeline with Jenkins — every change is tested and published automatically, reducing the risk of breaking client systems."
   },
   "br": {
-    "description": "Jenkins é uma ferramenta de automação voltada para integração e entrega contínua (CI/CD), permitindo construir, testar e implantar aplicações de forma automatizada."
+    "description": "Automatizei o processo de entrega de código na BashApp com Jenkins — cada atualização é testada e publicada automaticamente, sem risco de quebrar o sistema dos clientes."
   }
 }
 </i18n>

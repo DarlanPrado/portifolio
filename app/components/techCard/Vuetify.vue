@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "Vuetify is a component framework for Vue based on Material Design, which makes it easy to create modern, responsive, and visually consistent interfaces."
+    "description": "The component library I used on Seth to build a dense, clear, responsive financial UI — a great fit for systems used by internal teams."
   },
   "br": {
-    "description": "Vuetify é um framework de componentes para Vue baseado no Material Design, que facilita a criação de interfaces modernas, responsivas e visualmente consistentes."
+    "description": "Biblioteca de componentes que usei no Seth para montar uma interface financeira densa, clara e responsiva — ideal para sistemas usados por equipes internas."
   }
 }
 </i18n>

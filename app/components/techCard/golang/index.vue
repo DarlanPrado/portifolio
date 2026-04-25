@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "Golang is a programming language created by Google, focused on performance, simplicity, and efficient concurrency, ideal for scalable and high-performance systems."
+    "description": "A high-performance language I used on BashApp to handle simultaneous dialing and real-time call monitoring without freezing the system."
   },
   "br": {
-    "description": "Golang é uma linguagem de programação criada pelo Google, focada em desempenho, simplicidade e concorrência eficiente, ideal para sistemas escaláveis e de alta performance."
+    "description": "Linguagem de alta performance que usei na BashApp para processar discagens simultâneas e monitoramento de chamadas em tempo real sem travar o sistema."
   }
 }
 </i18n>

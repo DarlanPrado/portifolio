@@ -18,10 +18,10 @@ const { t } = useI18n({
 <i18n lang="json">
 {
   "us": {
-    "description": "Laravel is a PHP framework designed for developing robust web applications, focusing on simplicity, security, and productivity."
+    "description": "The stack I structured at Seth for all financial logic — integrations with Serasa, billing, PIX, and collections automation for companies."
   },
   "br": {
-    "description": "Laravel é um framework PHP voltado para o desenvolvimento de aplicações web robustas, com foco em simplicidade, segurança e produtividade."
+    "description": "Stack que estruturei no Seth para toda a lógica financeira — integrações com Serasa, emissão de boletos, PIX e automação de cobrança para empresas."
   }
 }
 </i18n>
